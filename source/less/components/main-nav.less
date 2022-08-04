@@ -1,0 +1,38 @@
+@import "./variables.less";
+
+
+@media (min-width: @mobile-width) {
+  .main-nav__list {
+    padding-top: 20px;
+  }
+
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav--closed .site-list__item {
+    display: block;
+  }
+
+  .main-nav__list {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

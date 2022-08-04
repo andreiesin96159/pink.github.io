@@ -1,0 +1,84 @@
+@import "./variables.less";
+
+.form__fieldset {
+  @media (min-width: @mobile-width) {
+    border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @white-color;
+    border-radius: 1px;
+  }
+}
+
+.button-aplly {
+  width: 276px;
+  height: 59px;
+  background: #2aab6d;
+  border: 2px solid #2aab6d;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.benefits-form__obligatory {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: @text-color;
+
+  .benefits-form__star {
+    color: @red-color;
+  }
+}
+
+.form {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 940px;
+    margin: 0 auto;
+
+    .form__fieldset {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.form__div {
+  text-align: center;
+
+  .benefits-form__for-fill {
+    display: none;
+  }
+
+  .button {
+    margin-bottom: 40px;
+  }
+
+  .benefits-form__obligatory {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    .benefits-form__for-fill {
+      display: inline;
+    }
+  }
+}
